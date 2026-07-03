@@ -130,22 +130,22 @@
     {
       "path": "MANIFEST.json",
       "bytes": 13748,
-      "sha256": "734ceea52a0f9673e1a6a638ef1dfa90a02a28969ec70de727866186103c4462"
+      "sha256": "c8fa1acbe13ebeef358c92a30e609a9cbda40dfe79058e5b2b3417a4a2521aea"
     },
     {
       "path": "MANIFEST_ENTERPRISE.json",
-      "bytes": 18846,
-      "sha256": "21149f426b87e3d74eb33f16d74321939e459d209319308391b33f15e5eb3cd8"
+      "bytes": 24499,
+      "sha256": "eae98dc9a8f0ec062a5333684f66a4ace304fddae97d28300b02493a2fdbe8dd"
     },
     {
       "path": "MANIFEST_UI_V7.json",
       "bytes": 10604,
-      "sha256": "4bf6d69a2339d5867567f5f34e2dfa53afd340e4a67b61267368ec8fe1d0864d"
+      "sha256": "5dcb03691f0a57e028b61aa5ced3f3ad7b4c28f12594ef87776b62afafbafb1a"
     },
     {
       "path": "MANIFEST_SALES_DASHBOARD_V6.json",
-      "bytes": 11996,
-      "sha256": "f09cdf2f54d03257c5dac59fc8c801e83d5b72a59ecac92f312b9032e45b3abf"
+      "bytes": 12161,
+      "sha256": "d77da10f004436679571158034561b6ed1d94e16b1581ef53675746881105bb6"
     },
     {
       "path": "app/techcoop_map_v7.html",
@@ -234,11 +234,11 @@
     },
     {
       "path": ".github/workflows/pages.yml",
-      "bytes": 2381,
-      "sha256": "cde4df1358df3e0283a5444deb439b8f11b590dfc744133ac4cdbfaa8b74def2"
+      "bytes": 2422,
+      "sha256": "dc774d2fe34171b2367b3396522504aad11fdd6dd34913b98177eb1c7728270a"
     }
   ],
-  "updated_at": "2026-07-03T04:32:13.882985+00:00",
+  "updated_at": "2026-07-03T04:52:43.410692+00:00",
   "ui_v7_static_pages_layer": {
     "base_companies": 2223861,
     "role_scored_companies": 558373,
@@ -273,10 +273,10 @@
     "target_pages_url": "https://arseniy24rus.github.io/TechCoop/",
     "root_entrypoint": "index.html",
     "mode": "GitHub Pages static allowlist",
-    "file_count": 6412,
-    "bytes": 940848226,
+    "file_count": 6413,
+    "bytes": 940854416,
     "mb_decimal": 940.85,
-    "mib": 897.26,
+    "mib": 897.27,
     "under_github_pages_1gb": true,
     "data_counts": {
       "base_companies": 2223861,
