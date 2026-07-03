@@ -272,29 +272,30 @@
     "target_repo": "Arseniy24RUS/TechCoop",
     "target_pages_url": "https://arseniy24rus.github.io/TechCoop/",
     "root_entrypoint": "index.html",
-    "mode": "GitHub Pages static allowlist",
-    "file_count": 6413,
-    "bytes": 940854416,
+    "mode": "GitHub Pages static allowlist, published from main branch root",
+    "pages_source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "workflow": null,
+    "file_count": 6412,
+    "bytes": 940852509,
     "mb_decimal": 940.85,
     "mib": 897.27,
     "under_github_pages_1gb": true,
+    "max_file": {
+      "path": "index.html",
+      "bytes": 53310791
+    },
     "data_counts": {
-      "base_companies": 2223861,
-      "base_unique_inn": 2223861,
-      "role_rows": 1896871,
-      "role_scored_companies": 558373,
-      "enterprise_profiles": 8670,
-      "enterprise_named_profiles": 8670
+      "base_companies": null,
+      "base_unique_inn": null,
+      "role_rows": null,
+      "role_scored_companies": null,
+      "enterprise_profiles": null,
+      "enterprise_named_profiles": null
     },
-    "static_payload": {
-      "file_count": 6384,
-      "total_bytes": 871954335,
-      "total_mb": 831.56,
-      "max_file": {
-        "path": "companies/772.json",
-        "bytes": 9485165
-      }
-    },
+    "static_payload": {},
     "excluded": [
       ".venv",
       "preview",
@@ -308,7 +309,8 @@
       "*.parquet",
       "__pycache__",
       "screenshots",
-      "agents/skills"
+      "agents/skills",
+      ".github/workflows/pages.yml"
     ]
   }
 }

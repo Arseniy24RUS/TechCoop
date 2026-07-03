@@ -183,7 +183,7 @@
     "payload_mb": 831.56,
     "file_count": 6384,
     "manifest": "data/v7_static/manifest.json",
-    "github_pages_workflow": ".github/workflows/pages.yml"
+    "github_pages_source": "main:/"
   },
   "files": [
     {
@@ -203,8 +203,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1954,
-      "sha256": "dd1867074f07e4a7c3091bbc9994e5031bfedd8bf660aa4dd3bc479d637cfe13"
+      "bytes": 2469,
+      "sha256": "4da76410e83ed0bb316720f3042359512535224c091534a2d7133136f52c3157"
     },
     {
       "path": "README_UI_V7.md",
@@ -214,12 +214,12 @@
     {
       "path": "MANIFEST.json",
       "bytes": 13748,
-      "sha256": "734ceea52a0f9673e1a6a638ef1dfa90a02a28969ec70de727866186103c4462"
+      "sha256": "c8fa1acbe13ebeef358c92a30e609a9cbda40dfe79058e5b2b3417a4a2521aea"
     },
     {
       "path": "MANIFEST_ENTERPRISE.json",
       "bytes": 24499,
-      "sha256": "eae98dc9a8f0ec062a5333684f66a4ace304fddae97d28300b02493a2fdbe8dd"
+      "sha256": "d8e515d8eea326d251029a791991089bfe847207700a9ae723059adf36553ca9"
     },
     {
       "path": "MANIFEST_UI_V7.json",
@@ -229,7 +229,7 @@
     {
       "path": "MANIFEST_SALES_DASHBOARD_V6.json",
       "bytes": 12161,
-      "sha256": "d77da10f004436679571158034561b6ed1d94e16b1581ef53675746881105bb6"
+      "sha256": "a5e1881711b68e9f4fcc72e34ce2f5b940b6c71bc9004cfce3fb712efabd7d09"
     },
     {
       "path": "app/techcoop_map_v7.html",
@@ -315,11 +315,6 @@
       "path": "data/techcoop_ui_v7_payload.js",
       "bytes": 14272462,
       "sha256": "72f8bd480bdf8f3fd4149e8e4517c3d5a3d6d1e5e68bb9904228be9fd94b5ae5"
-    },
-    {
-      "path": ".github/workflows/pages.yml",
-      "bytes": 2422,
-      "sha256": "dc774d2fe34171b2367b3396522504aad11fdd6dd34913b98177eb1c7728270a"
     }
   ],
   "qa": {
@@ -355,29 +350,30 @@
     "target_repo": "Arseniy24RUS/TechCoop",
     "target_pages_url": "https://arseniy24rus.github.io/TechCoop/",
     "root_entrypoint": "index.html",
-    "mode": "GitHub Pages static allowlist",
-    "file_count": 6413,
-    "bytes": 940854416,
+    "mode": "GitHub Pages static allowlist, published from main branch root",
+    "pages_source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "workflow": null,
+    "file_count": 6412,
+    "bytes": 940852509,
     "mb_decimal": 940.85,
     "mib": 897.27,
     "under_github_pages_1gb": true,
+    "max_file": {
+      "path": "index.html",
+      "bytes": 53310791
+    },
     "data_counts": {
-      "base_companies": 2223861,
-      "base_unique_inn": 2223861,
-      "role_rows": 1896871,
-      "role_scored_companies": 558373,
-      "enterprise_profiles": 8670,
-      "enterprise_named_profiles": 8670
+      "base_companies": null,
+      "base_unique_inn": null,
+      "role_rows": null,
+      "role_scored_companies": null,
+      "enterprise_profiles": null,
+      "enterprise_named_profiles": null
     },
-    "static_payload": {
-      "file_count": 6384,
-      "total_bytes": 871954335,
-      "total_mb": 831.56,
-      "max_file": {
-        "path": "companies/772.json",
-        "bytes": 9485165
-      }
-    },
+    "static_payload": {},
     "excluded": [
       ".venv",
       "preview",
@@ -391,7 +387,8 @@
       "*.parquet",
       "__pycache__",
       "screenshots",
-      "agents/skills"
+      "agents/skills",
+      ".github/workflows/pages.yml"
     ]
   }
 }
