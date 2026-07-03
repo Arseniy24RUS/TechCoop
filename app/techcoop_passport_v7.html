@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TechCoop.AI - паспорт компании</title>
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../assets/techcoop_ui_v7.css">
+</head>
+<body data-initial-view="passport">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><img class="brand-logo" src="../assets/techcoop-logo-mark.png" alt=""><div class="brand-name">TechCoop<span>.AI</span></div></div>
+    <nav class="nav">
+      <button data-view="map"><span class="ico">⛓</span><span>Карта кооперации 2.0</span></button>
+      <button class="active" data-view="passport"><span class="ico">▣</span><span>Паспорт компании</span></button>
+    </nav>
+    <div class="side-bottom">Карта кооперации и паспорта компаний на основе проверенных данных.</div>
+  </aside>
+  <main class="main">
+    <section id="mapScreen" class="screen">
+      <div class="topbar"><div class="title"><h1 id="mapTitle">Карта кооперации 2.0</h1><p id="mapSubtitle">Находите сильные кооперационные треки между организациями</p></div><div class="actions"><button class="btn" id="exportReport">Экспорт отчёта</button><button class="btn primary" id="routePassportBtn">Сформировать паспорт трека</button></div></div>
+      <div class="filters card"><div class="field"><label>Регион</label><select id="regionFilter"></select></div><div class="field"><label>Направление технологий</label><select id="directionFilter"></select></div><div class="field"><label>Роль компании</label><select id="roleFilter"><option value="all">Все роли</option><option value="qualified_customer">Заказчики</option><option value="developer">Разработчики</option><option value="integrator">Интеграторы</option><option value="science_cadre_center">Наука и кадры</option></select></div><button class="btn" id="resetFilters">Сбросить фильтры ↻</button></div>
+      <div class="global-search card"><div class="field"><label>Поиск по базе 2,2 млн организаций</label><input id="globalSearch" autocomplete="off" placeholder="Название, ИНН, ОГРН, регион или ОКВЭД"></div><div id="globalSearchResults" class="search-results"></div></div>
+      <div id="mapStats" class="stats"></div>
+      <div class="toolbar"><label class="toggle">Показывать только сильные треки <input id="strongOnly" type="checkbox" checked></label><div class="hint">Карточки - организации; линии - расчётные связи; толщина линии - сила совместимости.</div></div>
+      <div class="layout-map"><div id="flowPanel" class="flow-panel card"><svg id="edgeLayer" class="edge-layer"></svg><div id="columns" class="columns"></div></div><aside id="routePanel" class="side-panel card"></aside></div>
+      <div id="legend" class="legend card"></div>
+    </section>
+    <section id="passportScreen" class="screen active">
+      <div class="topbar"><div class="title"><h1 id="passportTitle">Паспорт компании</h1><p id="passportSubtitle">Поиск конкретной фирмы и её кооперационного профиля.</p></div><div class="actions"><button class="btn" id="favoriteBtn">☆ В избранное</button><button class="btn" id="shareBtn">Поделиться</button></div></div>
+      <div class="search-wrap field"><input id="searchCompany" placeholder="Найти компанию по названию или ИНН"><div id="suggestions" class="suggestions"></div></div>
+      <div id="companyHead" class="company-head card"></div>
+      <div class="passport-grid"><div id="roleExplain" class="panel card"></div><div id="partners" class="panel card"></div><div id="miniRoute" class="panel card"></div></div>
+      <div class="passport-grid" style="grid-template-columns:1fr 1.25fr;"><div id="indicators" class="panel card"></div><div id="scenarios" class="panel card"></div></div>
+      <div class="passport-grid evidence-layout"><div id="companyEvidence" class="panel card"></div><div id="companyLocation" class="panel card"></div></div>
+    </section>
+  </main>
+</div>
+<div id="roleDrawer" class="drawer"><div class="drawer-backdrop" data-close-drawer></div><aside class="drawer-panel card"><div class="drawer-head"><div><h3 id="drawerTitle">Компании</h3><p id="drawerSubtitle" class="hint"></p></div><button class="btn" data-close-drawer>Закрыть</button></div><div id="drawerContent" class="drawer-content"></div></aside></div>
+<script src="../assets/vendor/leaflet/leaflet.js"></script>
+<script src="../data/techcoop_ui_v7_payload.js"></script>
+<script src="../assets/techcoop_ui_v7.js"></script>
+</body>
+</html>

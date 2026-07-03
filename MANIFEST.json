@@ -1,0 +1,397 @@
+{
+  "name": "TechMap.AI v5 Enterprise",
+  "type": "computational_system_with_enterprise_enrichment",
+  "generated_at": "2026-07-01T23:21:17+00:00",
+  "source_core_archive": "C:/Users/arsen/Downloads/data_150_rfsd_2024_v20251010_parquet.zip",
+  "source_note": "RFSD/BFO contains financial reporting, identifiers, OKVED, region, geocoding and status fields; it does not contain company names, products, vacancies, IP/RID or procurement.",
+  "core": {
+    "raw_rows": 3170560,
+    "filed_rows": 2249189,
+    "used_company_rows": 2223861,
+    "directions": 8,
+    "regional_balances": 720,
+    "cooperation_cards": 720,
+    "abm_direction_region_pairs": 720,
+    "abm_rows": 51840,
+    "abm_months": 24
+  },
+  "enterprise": {
+    "queue_unique_inn": 8670,
+    "profiles_total": 8670,
+    "identity_verified": 8670,
+    "identity_rows": 8670,
+    "identity_by_provider": {
+      "fns_bfo_public": 8623,
+      "egrul_itsoft_mirror": 32,
+      "public_company_card": 15
+    },
+    "gisp_rows": 471676,
+    "gisp_unique_inn": 7477,
+    "queue_with_gisp_product": 816,
+    "software_rows": 32490,
+    "software_unique_inn": 11357,
+    "queue_with_registered_software": 1041,
+    "ip_registry_rows": 15146,
+    "ip_registry_unique_inn": 7018,
+    "rospatent_public_search_rows": 8314,
+    "rospatent_public_search_unique_inn": 3256,
+    "rospatent_public_search_status": {
+      "success": 8020
+    },
+    "ip_rows_combined": 23460,
+    "queue_with_patent_or_ip": 3944,
+    "trudvsem_keyword_vacancies": 5269,
+    "vacancy_employer_demand": 2691,
+    "vacancy_region_profession_demand": 654,
+    "queue_with_trudvsem_vacancies": 397,
+    "queue_with_labor_evidence": 8670,
+    "procurement_rows": 568,
+    "procurement_unique_supplier_inn": 103,
+    "procurement_public_search_status": {
+      "not_found": 8567,
+      "success": 103
+    },
+    "queue_with_procurement_evidence": 103,
+    "manual_validation_top1000": 1000,
+    "manual_validation_rows": 0,
+    "mean_evidence_score": 45.4426,
+    "verified_or_better_profiles": 1232,
+    "strong_evidence_profiles": 0,
+    "evidence_levels": {
+      "L1_base": 4046,
+      "L2_indirect": 3392,
+      "L3_verified": 1232
+    },
+    "component_score_means": {
+      "identity_score_mean": 89.9112,
+      "financial_score_mean": 97.6367,
+      "labor_score_mean": 28.4314,
+      "product_score_mean": 19.4118,
+      "ip_score_mean": 45.4902,
+      "procurement_score_mean": 1.188,
+      "manual_validation_score_mean": 0.0
+    },
+    "component_score_nonzero": {
+      "identity_score_nonzero": 8670,
+      "financial_score_nonzero": 8670,
+      "labor_score_nonzero": 8670,
+      "product_score_nonzero": 1683,
+      "ip_score_nonzero": 3944,
+      "procurement_score_nonzero": 103,
+      "manual_validation_score_nonzero": 0
+    }
+  },
+  "entrypoints": [
+    "start_dashboard.cmd",
+    "app/techcoop_map_v7.html",
+    "app/techcoop_passport_v7.html",
+    "app/techcoop_ui_v7.html",
+    "index.html",
+    "app/index.html",
+    "app/enterprise_control_room.html",
+    "TechMap_AI_showcase_dashboard_standalone.html",
+    "app/techmap_cli.py",
+    "MANIFEST_UI_V7.json"
+  ],
+  "main_exports": [
+    "exports/direction_summary_wide.csv",
+    "exports/regional_balance.csv",
+    "exports/cooperation_cards.csv",
+    "exports/abm_simulation.csv",
+    "exports/enterprise_enrichment_data_model.csv",
+    "data/enriched/enterprise_company_profiles.csv",
+    "data/enriched/enterprise_identity_resolved.csv",
+    "data/enriched/enterprise_readiness_summary.csv",
+    "data/enriched/gisp_products_by_inn.csv",
+    "data/enriched/software_registry_by_inn.csv",
+    "data/enriched/patents_by_inn.csv",
+    "data/enriched/patents_rospatent_search_by_inn.csv",
+    "data/enriched/procurement_by_inn.csv",
+    "data/enriched/provider_run_log.csv"
+  ],
+  "audit_zip": {
+    "path": "TechMap_AI_v5_enterprise_external_audit.zip",
+    "bytes": 332382751,
+    "mb": 316.98,
+    "sha256": "60933bb52bc0a13da530b598f9975aa6c538a7347852ea16981b45ca98a2939d",
+    "sha256_file": "TechMap_AI_v5_enterprise_external_audit.zip.sha256",
+    "entries": 132,
+    "uncompressed_mb": 1443.52,
+    "compressed_mb": 316.97,
+    "updated_at": "2026-07-02T21:39:00+00:00",
+    "size_limit_mb": 500,
+    "verification": "ok: zip readable; v6 root restored; v7 map/passport pages present; forbidden raw/cache/secret entries absent",
+    "note": "Root manifest records final archive checksum; manifest copy inside the archive is intentionally pre-archive to avoid recursive self-hash.",
+    "exclusions": [
+      ".venv",
+      "preview",
+      "cache directories",
+      "raw parquet/zip inputs",
+      "data/external_raw",
+      "secrets/config with credentials"
+    ]
+  },
+  "updated": "2026-07-02T21:39:00+00:00",
+  "current_root_dashboard": "TechCoop.AI Sales Dashboard v6 restored; UI v7 available as separate pages",
+  "sales_dashboard_v6": {
+    "manifest": "MANIFEST_SALES_DASHBOARD_V6.json",
+    "entrypoint": "index.html",
+    "standalone": "TechCoop_AI_sales_dashboard_v6_standalone.html",
+    "installed_at": "2026-07-02T04:49:27+00:00",
+    "default_region": "moscow city",
+    "default_region_label": "Город Москва",
+    "default_region_updated_at": "2026-07-02T19:24:08+00:00",
+    "tooltip_dismiss_fix": "ok",
+    "tooltip_dismiss_updated_at": "2026-07-02T19:58:08+00:00",
+    "restored_from_baseline": "preview/baseline_v6_to_v7_20260702_235832",
+    "v7_links": [
+      "app/techcoop_map_v7.html",
+      "app/techcoop_passport_v7.html"
+    ],
+    "restored_at": "2026-07-02T21:35:19+00:00"
+  },
+  "brand_logo": {
+    "logo_mark": "assets/techcoop-logo-mark.png",
+    "favicon": "favicon.ico",
+    "note": "TechCoop.AI logo mark cropped from user-provided image; name is HTML text styled to match; other image content not used"
+  },
+  "ui_v7": {
+    "manifest": "MANIFEST_UI_V7.json",
+    "entrypoint": "app/techcoop_map_v7.html",
+    "app": "app/techcoop_ui_v7.html",
+    "source_archive": "C:/Users/arsen/Downloads/TechCoop_UI_v7_patch.zip",
+    "directions": 8,
+    "regions": 90,
+    "companies": 3000,
+    "maps": 176,
+    "role_rows": 32000,
+    "default_region": "moscow city",
+    "desktop_screenshot": "preview/qa_screenshots/dashboard_v7_map_concept_1440_release.png",
+    "mobile_screenshot": "preview/qa_screenshots/dashboard_v7_map_concept_mobile_390_release.png",
+    "updated_at": "2026-07-02T21:35:19+00:00",
+    "map_page": "app/techcoop_map_v7.html",
+    "passport_page": "app/techcoop_passport_v7.html",
+    "fallback_app": "app/techcoop_ui_v7.html",
+    "root_redirect": false,
+    "graph_redesign": "concept-like role columns with ribbon links and score labels"
+  },
+  "updated_at": "2026-07-03T04:32:13.752740+00:00",
+  "ui_v7_static_pages_layer": {
+    "base_companies": 2223861,
+    "role_scored_companies": 558373,
+    "enterprise_profiles": 8670,
+    "payload_mb": 831.56,
+    "file_count": 6384,
+    "manifest": "data/v7_static/manifest.json",
+    "github_pages_workflow": ".github/workflows/pages.yml"
+  },
+  "files": [
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+    },
+    {
+      "path": "index.html",
+      "bytes": 53310791,
+      "sha256": "4e93d381c76bf98955e35aeee71e08369acb52dd37cdebf280f704284468d68f"
+    },
+    {
+      "path": "favicon.ico",
+      "bytes": 536,
+      "sha256": "1011b17b661669295b691dc401a123abbfc8fa3cff04e6a7b147064ee032e259"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1954,
+      "sha256": "dd1867074f07e4a7c3091bbc9994e5031bfedd8bf660aa4dd3bc479d637cfe13"
+    },
+    {
+      "path": "README_UI_V7.md",
+      "bytes": 2355,
+      "sha256": "425bc989b5c125338d6c2f850b89f44a1c73544741b4613405e07577911e0e55"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 13583,
+      "sha256": "f5b2be34a9c13a17a891bec80b4ec2788994fdf093af1b89fa4c6998b71ebafa"
+    },
+    {
+      "path": "MANIFEST_ENTERPRISE.json",
+      "bytes": 18846,
+      "sha256": "21149f426b87e3d74eb33f16d74321939e459d209319308391b33f15e5eb3cd8"
+    },
+    {
+      "path": "MANIFEST_UI_V7.json",
+      "bytes": 10604,
+      "sha256": "4bf6d69a2339d5867567f5f34e2dfa53afd340e4a67b61267368ec8fe1d0864d"
+    },
+    {
+      "path": "MANIFEST_SALES_DASHBOARD_V6.json",
+      "bytes": 11996,
+      "sha256": "f09cdf2f54d03257c5dac59fc8c801e83d5b72a59ecac92f312b9032e45b3abf"
+    },
+    {
+      "path": "app/techcoop_map_v7.html",
+      "bytes": 5137,
+      "sha256": "505f15ef0288ba983af6dace39efb09de37ebdf453a92851b59dcec6cf53abd7"
+    },
+    {
+      "path": "app/techcoop_passport_v7.html",
+      "bytes": 5138,
+      "sha256": "a62adbf7d82cb690ba6ea164622ae9a3f9450b7c82856904e14b070545482563"
+    },
+    {
+      "path": "app/techcoop_ui_v7.html",
+      "bytes": 5165,
+      "sha256": "1676941eb9d188289dd2e66f70e2d51f43b2fd9a8947a798497de2af02295124"
+    },
+    {
+      "path": "assets/techcoop-logo-mark.png",
+      "bytes": 2903,
+      "sha256": "52fdf32398f7f38be10bed20d37da5f59c2a256faaf52dce2703763f9d9e88c2"
+    },
+    {
+      "path": "assets/favicon-16x16.png",
+      "bytes": 514,
+      "sha256": "61355302c9af045d273cb2c6a9ef681894be2448a2c294b68b492c52a000f744"
+    },
+    {
+      "path": "assets/favicon-32x32.png",
+      "bytes": 1332,
+      "sha256": "ee0fdcf9e93a8f506112f382ae008a9e455f4844a5c00226af0942f958f9e644"
+    },
+    {
+      "path": "assets/favicon-48x48.png",
+      "bytes": 2311,
+      "sha256": "d6177eea8ac3a04c882670a04aff93eae8538780c5a9e74fa46d3a00b1dbccf8"
+    },
+    {
+      "path": "assets/favicon-192x192.png",
+      "bytes": 22795,
+      "sha256": "55d869c00c849b770f85f82e5c6d9ac8165c12afdae5a46d2968ab74731292f4"
+    },
+    {
+      "path": "assets/apple-touch-icon.png",
+      "bytes": 20317,
+      "sha256": "1c9923217aea48d02fa3d5bab03a763359ca7ff858357110e2aae68b8bdf335c"
+    },
+    {
+      "path": "assets/techcoop_ui_v7.css",
+      "bytes": 21678,
+      "sha256": "df5c775670d0218f1092d0af13bf06f5bb1a147bb27b8edef1e45f5c68b6888d"
+    },
+    {
+      "path": "assets/techcoop_ui_v7.js",
+      "bytes": 57211,
+      "sha256": "d26bf1619436a7b501e1d2fade37b0f0b27581bf3557b3ed84adc76141d3af9d"
+    },
+    {
+      "path": "assets/vendor/leaflet/leaflet.css",
+      "bytes": 14806,
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    {
+      "path": "assets/vendor/leaflet/leaflet.js",
+      "bytes": 147552,
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+    },
+    {
+      "path": "assets/vendor/leaflet/images/marker-icon.png",
+      "bytes": 1466,
+      "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437"
+    },
+    {
+      "path": "assets/vendor/leaflet/images/marker-icon-2x.png",
+      "bytes": 2464,
+      "sha256": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528"
+    },
+    {
+      "path": "assets/vendor/leaflet/images/marker-shadow.png",
+      "bytes": 618,
+      "sha256": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da"
+    },
+    {
+      "path": "data/techcoop_ui_v7_payload.js",
+      "bytes": 14272462,
+      "sha256": "72f8bd480bdf8f3fd4149e8e4517c3d5a3d6d1e5e68bb9904228be9fd94b5ae5"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 2381,
+      "sha256": "cde4df1358df3e0283a5444deb439b8f11b590dfc744133ac4cdbfaa8b74def2"
+    }
+  ],
+  "qa": {
+    "screenshots": [
+      "preview/qa_screenshots/techcoop_v7_static_map_1440.png",
+      "preview/qa_screenshots/techcoop_v7_static_passport_mts_1440.png",
+      "preview/qa_screenshots/techcoop_v7_static_passport_base_profile_1440.png",
+      "preview/qa_screenshots/techcoop_v7_static_map_mobile_390.png"
+    ],
+    "osm_no_coordinate_fallback": "ok: base-only profile without coordinates shows OpenStreetMap search link and no empty map"
+  },
+  "audit_archive": {
+    "path": "TechMap_AI_v5_enterprise_external_audit.zip",
+    "bytes": 225518311,
+    "mb": 215.07,
+    "sha256": "f3065f3fb68a617da57e51a21335f9c722c2574923d1e1f7bbea2349fd114e79",
+    "entries": 6483,
+    "under_500mb": true,
+    "exclusions": [
+      ".venv",
+      "preview",
+      "logs",
+      "data/external_raw",
+      "data/techmap_system.duckdb",
+      "raw parquet/zip",
+      "secrets",
+      "old zip artifacts"
+    ]
+  },
+  "release": "0.1.0",
+  "github_pages_release": {
+    "version": "0.1.0",
+    "target_repo": "Arseniy24RUS/TechCoop",
+    "target_pages_url": "https://arseniy24rus.github.io/TechCoop/",
+    "root_entrypoint": "index.html",
+    "mode": "GitHub Pages static allowlist",
+    "file_count": 6412,
+    "bytes": 940848226,
+    "mb_decimal": 940.85,
+    "mib": 897.26,
+    "under_github_pages_1gb": true,
+    "data_counts": {
+      "base_companies": 2223861,
+      "base_unique_inn": 2223861,
+      "role_rows": 1896871,
+      "role_scored_companies": 558373,
+      "enterprise_profiles": 8670,
+      "enterprise_named_profiles": 8670
+    },
+    "static_payload": {
+      "file_count": 6384,
+      "total_bytes": 871954335,
+      "total_mb": 831.56,
+      "max_file": {
+        "path": "companies/772.json",
+        "bytes": 9485165
+      }
+    },
+    "excluded": [
+      ".venv",
+      "preview",
+      "logs",
+      "docs",
+      "src",
+      "tests",
+      "data/external_raw",
+      "data/techmap_system.duckdb",
+      "*.zip",
+      "*.parquet",
+      "__pycache__",
+      "screenshots",
+      "agents/skills"
+    ]
+  }
+}

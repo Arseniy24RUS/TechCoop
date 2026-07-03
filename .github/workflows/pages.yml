@@ -1,0 +1,71 @@
+name: Deploy static dashboard to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site/app _site/assets/vendor/leaflet/images _site/data
+          cp index.html _site/
+          cp favicon.ico _site/ || true
+          cp VERSION README.md README_UI_V7.md MANIFEST.json MANIFEST_ENTERPRISE.json MANIFEST_UI_V7.json MANIFEST_SALES_DASHBOARD_V6.json _site/ || true
+          cp app/techcoop_map_v7.html _site/app/
+          cp app/techcoop_passport_v7.html _site/app/
+          cp app/techcoop_ui_v7.html _site/app/
+          cp assets/techcoop-logo-mark.png _site/assets/
+          cp assets/favicon-16x16.png _site/assets/ || true
+          cp assets/favicon-32x32.png _site/assets/
+          cp assets/favicon-48x48.png _site/assets/ || true
+          cp assets/favicon-192x192.png _site/assets/ || true
+          cp assets/apple-touch-icon.png _site/assets/
+          cp assets/techcoop_ui_v7.css _site/assets/
+          cp assets/techcoop_ui_v7.js _site/assets/
+          cp assets/vendor/leaflet/leaflet.css _site/assets/vendor/leaflet/
+          cp assets/vendor/leaflet/leaflet.js _site/assets/vendor/leaflet/
+          cp assets/vendor/leaflet/images/marker-icon.png _site/assets/vendor/leaflet/images/
+          cp assets/vendor/leaflet/images/marker-icon-2x.png _site/assets/vendor/leaflet/images/
+          cp assets/vendor/leaflet/images/marker-shadow.png _site/assets/vendor/leaflet/images/
+          cp data/techcoop_ui_v7_payload.js _site/data/
+          cp -R data/v7_static _site/data/
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
