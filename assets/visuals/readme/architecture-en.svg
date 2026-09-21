@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="850" viewBox="0 0 1000 850" role="img" aria-labelledby="title desc">
+  <title id="title">TechCoop.AI static release: public evidence to browser passport</title>
+  <desc id="desc">Public evidence sources are transformed into static JSON shards; the browser renders search, passports, evidence tabs and a cooperation map without a backend API.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12 Z" fill="#264653"/>
+    </marker>
+    <style>
+      .bg{fill:#f7faf8}
+      .box{fill:#fff;stroke:#264653;stroke-width:2.4}
+      .soft{fill:#e8f3ef}
+      .badge{fill:#f0c65a;stroke:#264653;stroke-width:1.8}
+      .text{font-family:Arial, sans-serif;fill:#183033;font-size:22px;letter-spacing:0}
+      .title{font-weight:700;font-size:28px}
+      .boxhead{font-weight:700;font-size:25px}
+      .small{font-size:22px}
+      .muted{fill:#536568;font-size:20px}
+      .badgeText{font-size:20px}
+      .line{stroke:#264653;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1000" height="850"/>
+  <text class="text title" x="52" y="58">TechCoop.AI static release: public evidence to browser passport</text>
+  <rect class="box soft" x="70" y="90" width="860" height="240" rx="10"/>
+<text class="text boxhead" x="98" y="132">Public evidence</text>
+<text class="text small" x="98" y="172">GISP products, software registry, patents/RID</text>
+<text class="text small" x="98" y="200">vacancies, procurement and company registers</text>
+<text class="text small" x="98" y="228">finance and OKVED indicators</text>
+<text class="text small muted" x="98" y="260">Missing rows mean no public record was found there,</text>
+<text class="text small muted" x="98" y="286">not proof of zero activity.</text>
+  <line class="line" x1="500" y1="342" x2="500" y2="366"/>
+  <rect class="box" x="70" y="370" width="860" height="220" rx="10"/>
+<text class="text boxhead" x="98" y="412">Release builder</text>
+<text class="text small" x="98" y="452">normalizes records and company identifiers</text>
+<text class="text small" x="98" y="480">scores four cooperation roles</text>
+<text class="text small" x="98" y="508">writes static JSON shards and evidence counts</text>
+<rect class="badge" x="564" y="524" width="332" height="44" rx="8"/>
+<text class="text small badgeText" x="582" y="552">No invented company names</text>
+  <line class="line" x1="500" y1="602" x2="500" y2="628"/>
+  <rect class="box" x="70" y="630" width="860" height="165" rx="10"/>
+<text class="text boxhead" x="98" y="672">GitHub Pages interface</text>
+<text class="text small" x="98" y="712">searches 2.2M company profiles</text>
+<text class="text small" x="98" y="740">opens passport, evidence tabs and map</text>
+<text class="text small" x="98" y="768">loads JSON in the browser; no backend API</text>
+  <rect class="box" x="105" y="810" width="790" height="34" rx="8"/>
+  <text class="text small" x="125" y="834">Scenario: company search -&gt; passport -&gt; evidence -&gt; cooperation map</text>
+</svg>

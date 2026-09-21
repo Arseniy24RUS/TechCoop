@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="850" viewBox="0 0 1000 850" role="img" aria-labelledby="title desc">
+  <title id="title">TechCoop.AI: от публичных источников к паспорту в браузере</title>
+  <desc id="desc">Публичные подтверждающие источники превращаются в статические фрагменты JSON; браузер показывает поиск, паспорт, вкладки подтверждений и карту кооперации без серверного API.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12 Z" fill="#264653"/>
+    </marker>
+    <style>
+      .bg{fill:#f7faf8}
+      .box{fill:#fff;stroke:#264653;stroke-width:2.4}
+      .soft{fill:#e8f3ef}
+      .badge{fill:#f0c65a;stroke:#264653;stroke-width:1.8}
+      .text{font-family:Arial, sans-serif;fill:#183033;font-size:22px;letter-spacing:0}
+      .title{font-weight:700;font-size:28px}
+      .boxhead{font-weight:700;font-size:25px}
+      .small{font-size:22px}
+      .muted{fill:#536568;font-size:20px}
+      .badgeText{font-size:20px}
+      .line{stroke:#264653;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1000" height="850"/>
+  <text class="text title" x="52" y="58">TechCoop.AI: от публичных источников к паспорту в браузере</text>
+  <rect class="box soft" x="70" y="90" width="860" height="240" rx="10"/>
+<text class="text boxhead" x="98" y="132">Публичные источники</text>
+<text class="text small" x="98" y="172">продукция ГИСП, реестр ПО, патенты/РИД</text>
+<text class="text small" x="98" y="200">вакансии, закупки и реестры компаний</text>
+<text class="text small" x="98" y="228">финансы и показатели ОКВЭД</text>
+<text class="text small muted" x="98" y="260">Нет строки в источнике — подтверждение не найдено там,</text>
+<text class="text small muted" x="98" y="286">это не доказанный ноль активности.</text>
+  <line class="line" x1="500" y1="342" x2="500" y2="366"/>
+  <rect class="box" x="70" y="370" width="860" height="220" rx="10"/>
+<text class="text boxhead" x="98" y="412">Сборка релиза</text>
+<text class="text small" x="98" y="452">нормализует записи и идентификаторы компаний</text>
+<text class="text small" x="98" y="480">оценивает четыре роли кооперации</text>
+<text class="text small" x="98" y="508">создает фрагменты JSON и счетчики подтверждений</text>
+<rect class="badge" x="564" y="524" width="332" height="44" rx="8"/>
+<text class="text small badgeText" x="582" y="552">Названия не придумываются</text>
+  <line class="line" x1="500" y1="602" x2="500" y2="628"/>
+  <rect class="box" x="70" y="630" width="860" height="165" rx="10"/>
+<text class="text boxhead" x="98" y="672">Интерфейс GitHub Pages</text>
+<text class="text small" x="98" y="712">ищет по 2,2 млн профилей компаний</text>
+<text class="text small" x="98" y="740">открывает паспорт, вкладки подтверждений и карту</text>
+<text class="text small" x="98" y="768">загружает JSON в браузере; без серверного API</text>
+  <rect class="box" x="105" y="810" width="790" height="34" rx="8"/>
+  <text class="text small" x="125" y="834">Сценарий: поиск компании -&gt; паспорт -&gt; подтверждения -&gt; карта</text>
+</svg>
